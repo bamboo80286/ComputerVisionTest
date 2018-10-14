@@ -145,7 +145,7 @@ namespace ConputerVisionTest
                     await inputStream.ReadAsync(byteData.AsBuffer(), (uint)byteData.Length, InputStreamOptions.None);
                     //MakeAnalysisRequest(byteData);
 
-                    VisionServiceClient VisionServiceClient = new VisionServiceClient("d6f05f9e994347ba9eca928029e020ef");
+                    VisionServiceClient VisionServiceClient = new VisionServiceClient("");  // require key
                     OcrResults ocrResult = await VisionServiceClient.RecognizeTextAsync(byteData, "ja");
 
                 }
